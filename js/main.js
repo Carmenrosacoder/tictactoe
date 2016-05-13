@@ -1,7 +1,6 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     var c=0;
-    var array = [ [ "", "", "" ],
-                  [ "", "", "" ],
+    var array = ["", "", "" , "", "", "" ],
                   [ "", "", "" ]
                 ]
     $(".casilla").click(function(){
@@ -16,10 +15,7 @@ $(document).ready(function(){
         array[i][j] = texto;
         for(var i=0;i<3;i++){
             for(var j=0;j<3;i++){
-        if((array[i][j]==array[i+1][j] && array[i][j]==array[i+2][j]) || (array[i][j]==array[i][j+1] && array[i][j]==array[i][j+2])){
-            alert('ganador');
-        }
-        else if((array[i][j]==array[i+1][j] && array[i][j]==array[i+2][j]) || (array[i][j]==array[i][j+1] && array[i][j]==array[i][j+2])){
+        if((array[i][j]==array[i+j][j] && array[i][j]==array[i+j][j]) || (array[i][j]==array[i][j+i] && array[i][j]==array[i][j+i])){
             alert('ganador');
         }
         }}
@@ -27,29 +23,20 @@ $(document).ready(function(){
 
     console.log(array);
 
-});
+});*/
 
-/*$(document).ready(function(){
+$(document).ready(function(){
     c=0;
 $('.casilla').click(function(){
     c++;
-    var x=1;
-    var o=0;
-    if(c%2===0) {
-    $(this).append("x");
-    x++;
-    if(x===3){
-        alert('ganador');
-    }
-}
-    else {
-    $(this).append("o");
-    o++;
-
-}
+    if(c%2===0) $(this).append("x");
+    else $(this).append("o");
     $(this).off();
 });
-});*/
+});
+if($('#cas-1').text===$('#cas-2').text===$('#cas-3').text){
+    alert('ganador');
+}
 /*
  var array=[];
 $('#fila1 .casilla').each(function(){
